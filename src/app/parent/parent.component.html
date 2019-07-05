@@ -1,4 +1,22 @@
 <p>This is the PARENT</p>
 <input type="text" [(ngModel)]="inputText" placeholder="Enter the tab number ...">
 {{inputText}}
-<app-children></app-children>
+<div class="mainArea">
+  <mat-tab-group (selectedTabChange)="onTabClick($event)">
+    <mat-tab label="First Child">
+      <ng-template matTabContent>
+        <app-first-child></app-first-child>
+      </ng-template>
+    </mat-tab>
+    <mat-tab label="Second Child">
+      <ng-template matTabContent>
+        <app-second-child></app-second-child>
+      </ng-template>
+    </mat-tab>
+    <mat-tab label="Third Child">
+      <ng-template matTabContent>
+          <app-third-child></app-third-child>
+        </ng-template>
+    </mat-tab>
+  </mat-tab-group>
+</div>

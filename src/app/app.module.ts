@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { MatTabsModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { ParentComponent } from './parent/parent.component';
@@ -20,7 +21,8 @@ import { ThirdChildComponent } from './third-child/third-child.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
